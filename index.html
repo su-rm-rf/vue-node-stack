@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue-stack</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="./assets/cs.css">
+	<script src="./vue.js"></script>
+</head>
+<body>
+
+	<div id="root">
+		<h2 v-on:click="handle">
+			{{ product }}
+		</h2>
+		<input v-model="product" />
+		<span v-bind:title="product">
+			{{description}}
+		</span>
+		<p v-if="show">条件判断</p>
+		<ul>
+			<li v-for="wth in wths">{{ wth.date }} is {{ wth.wth }}</li>
+		</ul>
+		<todo-item text2="text22" v-bind:text3="text33"></todo-item>
+
+		<ul>
+			<wth-item v-for="wth2 in wths" v-bind:wth="wth2" v-bind:key="wth2.date"></wth-item>
+		</ul>
+	</div>
+
+	<script src="./main.js"></script>
+</body>
+</html>
