@@ -5,23 +5,34 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="./assets/cs.css">
-	<script src="./vue.js"></script>
+	<script src="./assets/lodash.js"></script>
+	<script src="./assets/axios.js"></script>
+	<script src="./assets/vue.js"></script>
 </head>
 <body>
 
 	<div id="root">
-		<h2 v-on:click="handle">
-			{{ product }}
-		</h2>
-		<input v-model="product" />
-		<span v-bind:title="product">
-			{{description}}
-		</span>
-		<p v-if="show">条件判断</p>
+		<h2>{{ product }}</h2>
+
+		<h3>{{ rawHtml }}</h3>
+		<h3 v-html="rawHtml"></h3>
+
+		<div>
+			<input v-model="product" />
+			<span v-bind:title="product" v-on:click="handle">
+				{{description}}
+			</span>
+			<div>{{ answer2 }}</div>
+		</div>
+		<p v-if="show">现身</p>
+		<button v-bind:disabled="!show">{{ !show ? '禁止' : '可点击' }}</button>
+		<div style="color:#9f9">{{ description.split().reverse().join('') }}</div>
+		
 		<ul>
 			<li v-for="wth in wths">{{ wth.date }} is {{ wth.wth }}</li>
 		</ul>
 		<todo-item text2="text22" v-bind:text3="text33"></todo-item>
+		<div>{{ isSun }}</div>
 
 		<ul>
 			<wth-item v-for="wth2 in wths" v-bind:wth="wth2" v-bind:key="wth2.date"></wth-item>
