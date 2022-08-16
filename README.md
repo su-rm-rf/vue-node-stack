@@ -2,4 +2,4 @@
 
 # Vue全家桶
 
-vue
+vue、vuex
