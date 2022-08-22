@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "./asset2",
+    "allowJs": true,
+    "target": "ES5",
+    "noEmitOnError": true,
+    "noImplicitAny": true
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}
