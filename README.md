@@ -2,6 +2,6 @@
 
 # Vue全家桶
 
-vue、vuex
+vue、vuex、vue-router
 
 composition
