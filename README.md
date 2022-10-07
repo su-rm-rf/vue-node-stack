@@ -6,7 +6,7 @@ JS解析引擎：Webkit、V8
 
 # Vue全家桶
 
-composition
+vue、vuex、vue-router
 
 babel, webpack5, es6, ts, sass, vue3, vue-router4, vuex, axios, karam, jasmine, jest
 
