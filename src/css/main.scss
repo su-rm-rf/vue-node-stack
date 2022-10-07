@@ -1,0 +1,7 @@
+$color: #f99;
+
+div {
+  color: $color;
+  border: 10px solid transparent;
+  border-image: url('./001.png') 30 30 round;
+}
